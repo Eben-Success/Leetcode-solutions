@@ -1,9 +1,11 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        charSet = set()
+        # Space complexity is O(n)
+        # Time complexity is O(n)
         
-        l = 0
+        charSet = set()
         res = 0
+        l = 0
         
         for r in range(len(s)):
             while s[r] in charSet:
