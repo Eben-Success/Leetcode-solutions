@@ -1,19 +1,22 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        low, high = 0, x
         
-        while low + 1 < high:
-            mid = (low +high) // 2
+        # Implementing Binary Search
+        start, end = 0, x
+        
+        while start + 1 < end:
+            mid = (start + end) // 2
             
             if (mid * mid) == x:
                 return mid
             
             elif (mid * mid) < x:
-                low = mid
+                start = mid
+            
             else:
-                high = mid
-        if (high * high) == x:
-            return high
-        return low
-      
+                end = mid
+        
+        if (end * end) == x:
+            return end
+        return start
         
