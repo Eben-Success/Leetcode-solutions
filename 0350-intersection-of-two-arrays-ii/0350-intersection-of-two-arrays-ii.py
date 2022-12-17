@@ -6,7 +6,6 @@ class Solution:
         # Space: O(sorting) | O(1)
         
         nums1.sort(), nums2.sort()
-        nums1.sort(), nums2.sort()
         
         l = r = 0
         res = []
