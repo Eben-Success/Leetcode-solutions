@@ -12,18 +12,18 @@ class Solution:
         # Time: O(n)
         # Space: O(n): call stack
         
-#         res = []
+        res = []
         
-#         def inorder(root):
-#             if root is None:
-#                 return
+        def inorder(root):
+            if root is None:
+                return
             
-#             inorder(root.left)
-#             res.append(root.val)
-#             inorder(root.right)
+            inorder(root.left)
+            res.append(root.val)
+            inorder(root.right)
             
-#         inorder(root)
-#         return res
+        inorder(root)
+        return res
     
     
     
@@ -31,17 +31,17 @@ class Solution:
         # Time: O(n)
         # Space: O(n + m): stack and res
         
-        res = []
-        stack = []
-        cur = root
+#         res = []
+#         stack = []
+#         cur = root
         
-        while stack or cur:
-            while cur:
-                stack.append(cur)
-                cur = cur.left
-            cur = stack.pop()
-            res.append(cur.val)
-            cur = cur.right
-        return res
+#         while stack or cur:
+#             while cur:
+#                 stack.append(cur)
+#                 cur = cur.left
+#             cur = stack.pop()
+#             res.append(cur.val)
+#             cur = cur.right
+#         return res
                 
         
