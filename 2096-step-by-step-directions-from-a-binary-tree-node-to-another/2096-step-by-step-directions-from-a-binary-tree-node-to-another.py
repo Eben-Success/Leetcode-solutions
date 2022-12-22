@@ -7,6 +7,9 @@
 class Solution:
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
         
+        # Time: O(n)
+        # Space: O(n)
+        
         # convert binary tree into adjacency list using graph
         graph = collections.defaultdict(list)
         
@@ -46,6 +49,7 @@ class Solution:
                 return cur_path
             else:
                 for nei, direction in graph[cur_val]:
-                    queue.append((nei, cur_path + direction))
+                    if nei not in visited:
+                        queue.append((nei, cur_path + direction))
             
         
