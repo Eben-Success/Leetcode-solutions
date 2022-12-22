@@ -49,7 +49,6 @@ class Solution:
                 return cur_path
             else:
                 for nei, direction in graph[cur_val]:
-                    if nei not in visited:
-                        queue.append((nei, cur_path + direction))
+                    queue.append((nei, cur_path + direction))
             
         
