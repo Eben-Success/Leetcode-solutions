@@ -39,24 +39,28 @@ class Solution:
 #             char[i] = s[i]
 #         return len(s)
 
-        s = ""
         count = 0
         prev_char = chars[0]
+        i = 0
         for char in chars:
             if char == prev_char:
                 count += 1
             else:
-                s += prev_char
+                chars[i] = prev_char
+                i += 1
                 if count > 1:
-                    s += str(count)
+                    for c in str(count):
+                        chars[i] = c
+                        i += 1
                 prev_char = char
                 count = 1
-        s += prev_char
+        chars[i] = prev_char
+        i += 1
         if count > 1:
-            s += str(count)
-        for i in range(len(s)):
-            chars[i] = s[i]
-        return len(s)
+            for c in str(count):
+                chars[i] = c
+                i += 1
+        return i
 
 
 
