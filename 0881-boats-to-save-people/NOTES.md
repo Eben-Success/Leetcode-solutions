@@ -1,0 +1,1 @@
+Sort the array of people in ascending order, and then pair the heaviest person with the lighest person that can fit in the boat, then the second heaviest person with the second lightest person that can fit in the boat, and so on. This way, we can minimize the number of boats needed.
