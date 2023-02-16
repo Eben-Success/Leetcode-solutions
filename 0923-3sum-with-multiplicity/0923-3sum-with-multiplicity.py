@@ -8,7 +8,10 @@ class Solution:
                 diff = target - (arr[i] + arr[j])
                 res += mp[diff] if diff in mp else 0
                 
-            mp[arr[i]] = mp.get(arr[i], 0) + 1
+            # mp[arr[i]] = mp.get(arr[i], 0) + 1
+            
+            if arr[i] in mp: mp[arr[i]] += 1
+            else: mp[arr[i]] = 1
             
         return res % int(1e9 + 7)
         
